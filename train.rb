@@ -10,7 +10,7 @@ class Train
   @@all = {}
 
   def self.find(train_number)
-    @@all[train_number]
+    @@all.find { |train|  train.number == train_number }
   end
 
   def initialize(train_number)
